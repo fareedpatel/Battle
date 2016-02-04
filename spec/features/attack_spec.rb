@@ -2,16 +2,15 @@ require_relative '../spec_helper.rb'
 require 'capybara/dsl'
 require 'selenium-webdriver'
 
-
-
-
-feature 'Have hit points'do
+feature 'Attacking' do 
 before do
     include Capybara::DSL
     Capybara.default_driver = :selenium
  end
-  scenario 'see Player 2 hit points'do
+scenario 'Player 1 attacks player 2'do
     sign_in_and_play
-    expect(page).to have_content('Fareed: 60HP')
+    click_link 'Attack'
+    expect(page).to have_content 'Dave attacked Fareed'
   end
+
 end
