@@ -44,3 +44,6 @@ DEPENDENCIES
   capybara
   rspec-sinatra
   sinatra
+
+BUNDLED WITH
+   1.11.2
