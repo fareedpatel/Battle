@@ -1,3 +1,4 @@
+require_relative '../spec_helper.rb'
 describe 'Switch turns' do
     context 'switch the current turn' do
        scenario 'at the start of the game' do
